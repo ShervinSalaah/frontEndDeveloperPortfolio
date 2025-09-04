@@ -242,14 +242,14 @@ header nav a{
 #project .container{
     overflow: auto;
 }
-/* experience */
-#experience{
+/* education */
+#education{
     background-image: linear-gradient(
         45deg, #212632, #242A34, #3C4C5A
     );
     background-size: cover;
 }
-#experience .list{
+#education .list{
     height: 100%;
     width: max-content;
     display: flex;
@@ -259,14 +259,14 @@ header nav a{
     position: relative;
     z-index: 1;
 }
-#experience .list .item{
+#education .list .item{
     display: grid;
     grid-template-rows: 1fr 50px 1fr;
     gap: 20px;
     width: 200px;
     flex-shrink: 0;
 }
-#experience .list .item i{
+#education .list .item i{
     background-color: #444B57;
     width: 50px;
     color: #16222D;
@@ -276,34 +276,34 @@ header nav a{
     align-items: center;
     border-radius: 50%;
 }
-#experience .list .item .time{
+#education .list .item .time{
     display: flex;
     align-items: end;
     font-size: large;
 }
-#experience .list .item .content .job{
+#education .list .item .content .job{
     font-size: large;
 }
-#experience .list .item .content .company{
+#education .list .item .content .company{
     color: #E4454A;
 }
-#experience .list .item .content .des{
+#education .list .item .content .des{
     font-size: 0.8em;
     opacity: 0.7;
 }
-#experience .list .item:nth-child(odd) .content{
+#education .list .item:nth-child(odd) .content{
     grid-row-start: 1;
     grid-row-end: 2;
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
-#experience .list .item:nth-child(odd) .time{
+#education .list .item:nth-child(odd) .time{
     grid-row-start: 3;
     grid-row-end: 4;
     align-items: start;
 }
-#experience .list::before{
+#education .list::before{
     position: absolute;
     top: 50%;
     width: 100%;
@@ -312,7 +312,7 @@ header nav a{
     content: '';
     z-index: -1;
 }
-#experience .container{
+#education .container{
     overflow: auto;
     padding: 50px;
 }
