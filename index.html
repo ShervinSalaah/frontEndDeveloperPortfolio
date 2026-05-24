@@ -3,305 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shervin-Portfolio</title>
+    <title>Shervin — Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-    <div class="loader_bg">
-		<div class="loader"></div>
-	</div>
+
+    <!-- Loader -->
+    <div class="loader_bg" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
     <header>
-        <nav>
-            <a data-tab="intro">Intro</a>
+        <div class="logo">Shervin</div>
+
+        <div class="nav-overlay" id="navOverlay"></div>
+
+        <nav id="mainNav">
+            <a data-tab="intro" class="active">Intro</a>
             <a data-tab="education">Education</a>
             <a data-tab="skill">Skill</a>
             <a data-tab="project">Project</a>
             <a data-tab="contact">Contact</a>
         </nav>
+
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
     </header>
 
-    <div class="tab" id="intro">
-        <div class="container">
-            <div class="avatar">
-                
-            </div>
-            <div class="content">
-                <div class="name">Shervin Salaah</div>
-                <div class="job">
-                     <span class="text-gradient">
-                        Web Developer
-                    </span>
+    <!-- All sections live in this fixed wrapper -->
+    <div id="tabs-wrapper">
+
+        <!-- Intro -->
+        <div class="tab active" id="intro">
+            <div class="container">
+                <div class="content">
+                    <div class="name">Shervin Salaah</div>
+                    <div class="job">
+                        <span class="text-gradient">Web Developer</span>
+                    </div>
+                    <div class="des">
+                        "I sit at the intersection of creativity, technology, and business. Pursuing degrees in both IT and Business,
+                        I build responsive, user-friendly websites and understand the business strategy to make them succeed.
+                        My cybersecurity training ensures every experience is not just engaging, but secure and trustworthy by design."
+                        <br>
+                        <a class="text-gradient" data-tab="project">See my Projects →</a>
+                    </div>
                 </div>
-                <div class="des">
-“I sit at the intersection of creativity, technology, and business. Pursuing degrees in both IT and Business, 
-					I build responsive, user-friendly websites and I understand 
-					the business strategy to make them succeed. 
-					My cybersecurity training ensures every experience is not just engaging, but secure and trustworthy by design."
-                    <br>
-                	<a class="text-gradient" data-tab="project"> See my Projects</a> 
-                </div>
-                
             </div>
         </div>
-    </div>
 
-    <div class="tab" id="education">
-        <div class="container">
-            <div class="list">
-                <div class="item">
-                    <div class="time">2024 Dec</div>
-                    <i class="fa-solid fa-school-flag"></i>
-                    <div class="content">
-                        <div class="job">Graduated High School</div>
-                        <div class="company">P/President's Science College </div>
-                        <div class="des">
-                            <!-- 15 -->
-                           National Schools Software Competition - Finalist 
+        <!-- Education -->
+        <div class="tab" id="education">
+            <div class="container">
+                <div class="timeline-track">
+                    <div class="list">
+                        <div class="item">
+                            <div class="time">2024 Dec</div>
+                            <i class="fa-solid fa-school-flag"></i>
+                            <div class="content">
+                                <div class="job">Graduated High School</div>
+                                <div class="company">P/President's Science College</div>
+                                <div class="des">National Schools Software Competition — Finalist</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="item">
-                    <div class="time">2025 Jan - 2026 Mar </div>
-                    <i class="fa-solid fa-school-flag"></i>
-                    <div class="content">
-                        <div class="job">Training Program</div>
-                        <div class="company">MarsTech International</div>
-                        <div class="des">
-                            <!-- 15 -->
-                           •Cybersecurity <br>
-                           •Artificial Intelligence <br> 
-						   •FullStack Development 
+                        <div class="item">
+                            <div class="time">2025 Jan – 2026 Mar</div>
+                            <i class="fa-solid fa-school-flag"></i>
+                            <div class="content">
+                                <div class="job">Training Program</div>
+                                <div class="company">MarsTech International</div>
+                                <div class="des">• Cybersecurity<br>• Artificial Intelligence<br>• FullStack Development</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="item">
-                    <div class="time">2025 Sep</div>
-                    <i class="fa-solid fa-school-flag"></i>
-                    <div class="content">
-                        <div class="job">BSBA (R) </div>
-                        <div class="company">University of People</div>
-                        <div class="des">
-                            <!-- 15 -->
-                            Bachelor of Science in Business Administration
+                        <div class="item">
+                            <div class="time">2025 Sep</div>
+                            <i class="fa-solid fa-school-flag"></i>
+                            <div class="content">
+                                <div class="job">BSBA (R)</div>
+                                <div class="company">University of People</div>
+                                <div class="des">Bachelor of Science in Business Administration</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="item">
-                    <div class="time">2026 Jan - Present </div>
-                    <i class="fa-solid fa-school-flag"></i>
-                    <div class="content">
-                        <div class="job">Bsc(Hons)IT (R)</div>
-                        <div class="company">University of Moratuwa</div>
-                        <div class="des">
-                            <!-- 15 -->
-                            Also Completed Certificate in Web desin and Trainee-fullStack developer in Centre of Distance Learning
+                        <div class="item">
+                            <div class="time">2026 Jan – Present</div>
+                            <i class="fa-solid fa-school-flag"></i>
+                            <div class="content">
+                                <div class="job">BSc(Hons) IT (R)</div>
+                                <div class="company">University of Moratuwa</div>
+                                <div class="des">Also completed Certificate in Web Design and Trainee Full-Stack Developer at Centre of Distance Learning</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="tab" id="skill" >
-        <div class="container">
-            <div class="list">
-                <div class="item">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <div class="name">CSS</div>
-                    <div class="des">
-                        <!-- 7 -->
-                        I design responsive layouts with modern CSS, including Flexbox and Grid for clean, adaptive user interfaces
-                    </div>
-                </div>
-
-                <div class="item">
-                    <i class="fa-brands fa-html5"></i>
-                    <div class="name">HTML5</div>
-                    <div class="des">
-                        <!-- 7 -->
-                        I build semantic and accessible web pages using HTML5 best practices
-                    </div>
-                </div>
-
-                <div class="item">
-                    <i class="fa-brands fa-js"></i>
-                    <div class="name">Javascript</div>
-                    <div class="des">
-                        <!-- 7 -->
-                        I develop interactive features, handle DOM manipulation, and work with ES6+ for modern, dynamic applications
-                    </div>
-                </div>
-
-                <div class="item">
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <div class="name">Bootstrap</div>
-                    <div class="des">
-                        <!-- 7 -->
-                        I create fast, mobile-first designs using Bootstrap components and utilities.
-                    </div>
-                </div>
-
-                <div class="item">
-                   <i class="fa-solid fa-terminal"></i>
-                    <div class="name">CLI</div>
-                    <div class="des">
-                        <!-- 7 -->
-                        I use the command line for project setup, version control, and workflow automation
-                    </div>
-                </div>
-
-                <div class="item">
-                    <i class="fa-brands fa-github"></i>
-                    <div class="name">Git Version Control</div>
-                    <div class="des">
-                        <!-- 7 -->
-                        I manage projects with Git, handling branching, commits, and collaborative workflows on GitHub
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="tab" id="project" >
-        <div class="container">
-            <div class="list">
-                <div class="item">
-                    <img src="./Assets/pro1.png">
-                    <div class="index">#1</div>
-                    <div class="name">Design Agency</div>
-                    <div class="des">
-                        <!-- 20 -->
-                        A responsive landing page for a design agency, built with HTML and CSS to showcase modern layouts
-                    </div>
-                    <div class="author">
-                        <div class="job">
-                           <a href="https://shervinsalaah.github.io/designAgency/"> 
-                            <i class="fa-solid fa-eye"></i> Click to view
-                            </a>
-                        </div>
-                        <div class="time">
-                            2025/07/28
-                            <i class="fa-regular fa-clock"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./Assets/pro2.png">
-                    <div class="index">#2</div>
-                    <div class="name">Motivational Poster</div>
-                    <div class="des">
-                        <!-- 20 -->
-                        A creative motivational poster web page designed with CSS with options for each mood.
-                    </div>
-                    <div class="author">
-                        <div class="job"> <a href="https://shervinsalaah.github.io/motivationalPoster/"> 
-                            <i class="fa-solid fa-eye"></i> Click to view
-                            </a></div>
-                        <div class="time">
-                            2025/07/08
-                            <i class="fa-regular fa-clock"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./Assets/pro3.png">
-                    <div class="index">#3</div>
-                    <div class="name">login Page</div>
-                    <div class="des">
-                        <!-- 20 -->
-                        A clean and secure login page
-                    </div>
-                    <div class="author">
-                        <div class="job"> <a href="./Assets/project1.html"> 
-                            <i class="fa-solid fa-eye"></i> Click to view
-                            </a></div>
-                        <div class="time">
-                            2025/06/17
-                            <i class="fa-regular fa-clock"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./Assets/pro4.png">
-                    <div class="index">#4</div>
-                    <div class="name">Pricing Plan</div>
-                    <div class="des">
-                        <!-- 20 -->
-                        A responsive pricing table featuring flexible plans and hover effects.
-                    </div>
-                    <div class="author">
-                        <div class="job"> <a href="./Assets/project2.html"> 
-                            <i class="fa-solid fa-eye"></i> Click to view
-                            </a></div>
-                        <div class="time">
-                            2025/06/18
-                            <i class="fa-regular fa-clock"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="./Assets/pro5.png">
-                    <div class="index">#5</div>
-                    <div class="name">Contact Form</div>
-                    <div class="des">
-                        <!-- 20 -->
-                        A contact form, styled using CSS and integrated with responsive design
-                    </div>
-                    <div class="author">
-                        <div class="job"> <a href="./Assets/project3.html"> 
-                            <i class="fa-solid fa-eye"></i> Click to view
-                            </a></div>
-                        <div class="time">
-                            2025/06/19
-                            <i class="fa-regular fa-clock"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="tab" id="contact">
-        <div class="container">
-            <div class="content">
-                <div class="thank text-gradient">Thank you!</div>
-                <div class="des">
-                    <!-- 50 -->
-                    Thanks for stopping by!<br>
-I’m passionate about building responsive websites, creative applications, and educational tools. Let’s connect and bring ideas to life.
-                    <br>
-                    <a data-tab="intro" class="text-gradient">See My Intro</a>
-                </div>
+        <!-- Skills -->
+        <div class="tab" id="skill">
+            <div class="container">
                 <div class="list">
-                    <div class="item">
-                        <i class="fa-solid fa-phone"></i>
-                        +94702267991
-                    </div>
 
+                    <!-- Font Awesome icons (available now) -->
                     <div class="item">
-                        <i class="fa-regular fa-envelope"></i>
-                        shervinsalah@gmail.com
+                        <i class="fa-brands fa-html5"></i>
+                        <div class="name">HTML5</div>
+                        <div class="des">Building well-structured, semantic web pages with modern HTML5 elements and accessibility in mind</div>
                     </div>
-
+                    <div class="item">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <div class="name">CSS</div>
+                        <div class="des">Responsive layouts using Flexbox, Grid, and modern CSS techniques</div>
+                    </div>
+                    <div class="item">
+                        <i class="fa-brands fa-js"></i>
+                        <div class="name">JavaScript</div>
+                        <div class="des">Creating Dynamic and interactive UIs</div>
+                    </div>
+                    <div class="item">
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <div class="name">Bootstrap</div>
+                        <div class="des">Rapid, mobile-first prototyping with Bootstrap's component library</div>
+                    </div>
+                    <div class="item">
+                        <i class="fa-brands fa-react"></i>
+                        <div class="name">React.js</div>
+                        <div class="des">Component-driven UIs with hooks, state management, and reusable logic</div>
+                    </div>
                     <div class="item">
                         <i class="fa-brands fa-github"></i>
-                        ShervinSalaah
+                        <div class="name">Git / GitHub</div>
+                        <div class="des">Version control, branching strategies, and collaborative workflows</div>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-terminal"></i>
+                        <div class="name">CLI</div>
+                        <div class="des">Efficient project setup, scripting, and workflow automation via terminal</div>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-database"></i>
+                        <div class="name">SQL</div>
+                        <div class="des">Structured queries, joins, and relational data modelling for web backends</div>
+                    </div>
+                    <div class="item">
+                        <i class="fa-brands fa-php"></i>
+                        <div class="name">PHP</div>
+                        <div class="des">Secure server-side scripting for dynamic pages and form handling</div>
+                    </div>
+
+                
+                    <div class="item">
+                        <div class="skill-icon">
+                        
+                            <img src="https://cdn.simpleicons.org/nextdotjs/CA3EA7" alt="Next.js icon">
+                        </div>
+                        <div class="name">Next.js</div>
+                        <div class="des">Exploring server-side rendering and static site generation with Next.js basics</div>
+                    </div>
+                    <div class="item">
+                        <div class="skill-icon">
+                            <img src="https://cdn.simpleicons.org/tailwindcss/CA3EA7" alt="Tailwind CSS icon">
+                        </div>
+                        <div class="name">Tailwind CSS</div>
+                        <div class="des">Using utility classes to style websites without writing custom CSS</div>
+                    </div>
+                    <div class="item">
+                        <div class="skill-icon">
+                            <img src="https://cdn.simpleicons.org/jquery/CA3EA7" alt="jQuery icon">
+                        </div>
+                        <div class="name">jQuery</div>
+                        <div class="des">Simplifying DOM manipulation and event handling with jQuery for faster development</div>
+                    </div>
+                    <div class="item">
+                        <div class="skill-icon">
+                            <img src="https://cdn.simpleicons.org/mariadb/CA3EA7" alt="MariaDB icon">
+                        </div>
+                        <div class="name">MariaDB</div>
+                        <div class="des">Working with MySQL-compatible databases for storing and managing web application data</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="tab" id="project">
+            <div class="container">
+                <div class="list">
+                    <div class="item">
+                        <img src="./Assets/pro1.png" alt="Design Agency">
+                        <div class="index">#1</div>
+                        <div class="name">Design Agency</div>
+                        <div class="des">A responsive landing page for a design agency, built with HTML and CSS to showcase modern layouts</div>
+                        <div class="author">
+                            <div class="job"><a href="https://shervinsalaah.github.io/designAgency/" target="_blank"><i class="fa-solid fa-eye"></i> View Live</a></div>
+                            <div class="time">2025/07/28</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="./Assets/pro2.png" alt="Motivational Poster">
+                        <div class="index">#2</div>
+                        <div class="name">Motivational Poster</div>
+                        <div class="des">A creative motivational poster web page designed with CSS with options for each mood</div>
+                        <div class="author">
+                            <div class="job"><a href="https://shervinsalaah.github.io/motivationalPoster/" target="_blank"><i class="fa-solid fa-eye"></i> View Live</a></div>
+                            <div class="time">2025/07/08</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="./Assets/pro3.png" alt="Login Page">
+                        <div class="index">#3</div>
+                        <div class="name">Login Page</div>
+                        <div class="des">A clean and secure login page</div>
+                        <div class="author">
+                            <div class="job"><a href="./Assets/project1.html" target="_blank"><i class="fa-solid fa-eye"></i> View Live</a></div>
+                            <div class="time">2025/06/17</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="./Assets/pro4.png" alt="Pricing Plan">
+                        <div class="index">#4</div>
+                        <div class="name">Pricing Plan</div>
+                        <div class="des">A responsive pricing table featuring flexible plans and hover effects</div>
+                        <div class="author">
+                            <div class="job"><a href="./Assets/project2.html" target="_blank"><i class="fa-solid fa-eye"></i> View Live</a></div>
+                            <div class="time">2025/06/18</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="./Assets/pro5.png" alt="Contact Form">
+                        <div class="index">#5</div>
+                        <div class="name">Contact Form</div>
+                        <div class="des">A contact form styled with CSS and integrated with responsive design</div>
+                        <div class="author">
+                            <div class="job"><a href="./Assets/project3.html" target="_blank"><i class="fa-solid fa-eye"></i> View Live</a></div>
+                            <div class="time">2025/06/19</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+        <!-- Contact -->
+        <div class="tab" id="contact">
+            <div class="container">
+                <div class="content">
+                    <div class="thank text-gradient">Thank you!</div>
+                    <div class="des">
+                        Thanks for stopping by!<br>
+                        I'm passionate about building responsive websites, creative applications, and educational tools.
+                        Let's connect and bring ideas to life.
+                        <br>
+                        <a class="text-gradient" data-tab="intro">← Back to Intro</a>
+                    </div>
+                    <div class="list">
+                        <div class="item"><i class="fa-solid fa-phone"></i> +94702267991</div>
+                        <div class="item"><i class="fa-regular fa-envelope"></i> shervinsalah@gmail.com</div>
+                        <div class="item"><i class="fa-brands fa-github"></i> ShervinSalaah</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script type="text/javascript" src="./scripts.js"></script>
-    
+    </div><!-- /tabs-wrapper -->
+
+    <script src="./scripts.js"></script>
 </body>
 </html>
