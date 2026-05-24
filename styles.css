@@ -112,6 +112,7 @@ header nav a{
 }
 #intro .content .name,
 #intro .content .job{
+	text-align: center; 
     font-size: 6em;
     font-weight: bold;
     font-family: 'Righteous', sans-serif;
