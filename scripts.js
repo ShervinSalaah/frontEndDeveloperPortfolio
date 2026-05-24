@@ -1,33 +1,44 @@
-setTimeout(function(){
-	$('.loader_bg').fadeToggle();
-},1000);
+// ── Loader ──────────────────────────────────────────────────────────────────
+setTimeout(function() {
+    $('#loader').fadeOut(500);
+}, 800);
 
-let intro = document.getElementById('intro');
-let experience = document.getElementById('experience');
-let skill = document.getElementById('skill');
-let project = document.getElementById('project');
-let contact = document.getElementById('contact');
+$(document).ready(function() {
 
-let aHref = document.querySelectorAll('a');
+    // ── Tab switching (no page scroll) ──────────────────────────────────────
+    function showTab(id) {
+        $('.tab').removeClass('active');
+        $('nav a').removeClass('active');
+        $('#' + id).addClass('active');
+        $('nav a[data-tab="' + id + '"]').addClass('active');
+    }
 
-let active = 'intro';
-let zIndex = 2;
+    // Wire every [data-tab] link anywhere on the page
+    $(document).on('click', '[data-tab]', function(e) {
+        e.preventDefault();
+        var id = $(this).data('tab');
+        showTab(id);
+        closeNav();
+    });
 
-aHref.forEach(a => {
-    a.addEventListener('click', function(event){
-        let tab = a.dataset.tab;
-        if(tab !== null && tab !== active){
+    // ── Hamburger / mobile nav ───────────────────────────────────────────────
+    function openNav() {
+        $('#hamburger').addClass('open');
+        $('#mainNav').addClass('open');
+        $('#navOverlay').addClass('open');
+    }
+    function closeNav() {
+        $('#hamburger').removeClass('open');
+        $('#mainNav').removeClass('open');
+        $('#navOverlay').removeClass('open');
+    }
 
-            let activeOld = document.querySelector('.tab.active');
-            if(activeOld) activeOld.classList.remove('active');
-            active = tab;
+    $('#hamburger').on('click', function() {
+        $('#mainNav').hasClass('open') ? closeNav() : openNav();
+    });
 
-            let tabActive = document.getElementById(active);
-            zIndex++;
-            tabActive.style.zIndex = zIndex;
-            tabActive.style.setProperty('--x', event.clientX + 'px');
-            tabActive.style.setProperty('--y', event.clientY + 'px');
-            tabActive.classList.add('active');
-        }
-    })
-})
+    $('#navOverlay').on('click', function() {
+        closeNav();
+    });
+
+});
